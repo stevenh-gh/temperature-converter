@@ -1,6 +1,7 @@
 import DegreesInput from "./components/DegreesInput.tsx";
 import TempType from "./components/TempType.tsx";
 import Convert from "./components/Convert.tsx";
+import Result from "./components/Result.tsx";
 
 const App = () => {
 
@@ -10,6 +11,7 @@ const App = () => {
          <DegreesInput/>
          <TempType/>
          <Convert/>
+         <Result/>
       </>
    );
 };
