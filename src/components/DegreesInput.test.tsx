@@ -15,5 +15,6 @@ describe("DegreesInput Component", () => {
    it("should have an input box", () => {
       const degreeInputElement = screen.getByLabelText(/Degrees/);
       expect(degreeInputElement).toBeInTheDocument();
+      expect(degreeInputElement.tagName.toLowerCase()).toBe("input");
    });
 });
