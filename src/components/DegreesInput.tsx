@@ -1,10 +1,20 @@
-import React from "react";
+import React, {SetStateAction} from "react";
 
-const DegreesInput: React.FC = () => {
+interface DegreesInputProp {
+   setInput?: React.Dispatch<SetStateAction<number | undefined>>;
+}
+
+const DegreesInput: React.FC<DegreesInputProp> = ({setInput}) => {
    return (
       <>
          <label htmlFor="degrees">Degrees</label>
-         <input type="number" id="degrees"/>
+         <input
+            type="number"
+            id="degrees"
+            onChange={(e) => {
+               if (setInput)
+                  setInput(Number(e.target.value));
+            }}/>
       </>
    );
 };
