@@ -14,9 +14,9 @@ const Result: React.FC<ResultProps> = ({num, degType}: ResultProps) => {
    return (
       <>
          <div>Result</div>
-         {num && (
+         {num !== undefined && (
             <>
-               <span>{num}</span>
+               <span data-testid="result">{num.toFixed(2)}</span>
                <span>°{degTypeMap.get(degType!)}</span>
             </>
          )}
