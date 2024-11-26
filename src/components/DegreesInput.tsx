@@ -6,16 +6,18 @@ interface DegreesInputProp {
 
 const DegreesInput: React.FC<DegreesInputProp> = ({setInput}) => {
    return (
-      <>
-         <label htmlFor="degrees">Degrees</label>
-         <input
+      <div className="field">
+         <label htmlFor="degrees" className="title is-5 label">Degrees</label>
+         <div className="control"><input
+            className="input"
             type="number"
             id="degrees"
             onChange={(e) => {
                if (setInput)
                   setInput(Number(e.target.value));
             }}/>
-      </>
+         </div>
+      </div>
    );
 };
 

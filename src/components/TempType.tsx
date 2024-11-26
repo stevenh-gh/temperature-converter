@@ -6,16 +6,20 @@ interface TempTypeProp {
 
 const TempType: React.FC<TempTypeProp> = ({setTemp}: TempTypeProp) => {
    return (
-      <>
-         <label htmlFor="type">Type</label>
-         <select name="type" id="type" onChange={(e) => {
-            if (setTemp)
-               setTemp(e.target.value);
-         }}>
-            <option value="fahrenheit">Fahrenheit</option>
-            <option value="celsius">Celsius</option>
-         </select>
-      </>
+      <div className="field">
+         <label htmlFor="type" className="title is-5 label">Type</label>
+         <div className="control">
+            <div className="select">
+               <select name="type" id="type" onChange={(e) => {
+                  if (setTemp)
+                     setTemp(e.target.value);
+               }}>
+                  <option value="fahrenheit">Fahrenheit</option>
+                  <option value="celsius">Celsius</option>
+               </select>
+            </div>
+         </div>
+      </div>
    );
 };
 

@@ -12,15 +12,15 @@ const Result: React.FC<ResultProps> = ({num, degType}: ResultProps) => {
    ]);
 
    return (
-      <>
-         <div>Result</div>
+      <div>
+         <div className="title is-5 label">Result</div>
          {num !== undefined && (
-            <>
-               <span data-testid="result">{num.toFixed(2)}</span>
+            <div>
+               <span data-testid="result">{num.toFixed(2) + " "}</span>
                <span>°{degTypeMap.get(degType!)}</span>
-            </>
+            </div>
          )}
-      </>
+      </div>
    );
 };
 

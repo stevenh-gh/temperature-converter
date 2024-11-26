@@ -24,9 +24,10 @@ const Convert: React.FC<ConvertProp> = ({num, degType, setResult}: ConvertProp) 
    };
 
    return (
-      <>
-         <button onClick={calculate}>Convert</button>
-      </>
+      <div className="is-flex">
+         <button className="button is-primary has-text-white is-align-content-flex-end" onClick={calculate}>Convert
+         </button>
+      </div>
    );
 };
 
