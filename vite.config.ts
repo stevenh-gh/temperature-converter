@@ -9,5 +9,6 @@ export default defineConfig({
       globals: true,
       setupFiles: "./src/setupTest.ts",
       environment: "jsdom",
-   }
+   },
+   base: "temperature-converter"
 });
